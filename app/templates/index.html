@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Match Finder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Job Match Finder</h1>
+        <div class="description">
+            <p>Select an option to proceed:</p>
+        </div>
+        
+        <form id="matchForm" action="/upload" method="post" enctype="multipart/form-data">
+            <div class="options">
+                <input type="radio" id="case1" name="case_type" value="both" required onchange="toggleForm()">
+                <label for="case1">Resume + Job Description</label><br>
+
+                <input type="radio" id="case2" name="case_type" value="resume_only" onchange="toggleForm()">
+                <label for="case2">Resume Only</label><br><br>
+            </div>
+
+            <div class="file-upload">
+                <label for="resume">Upload Resume (.pdf or .txt):</label>
+                <input type="file" name="resume" required><br><br>
+                
+                <div id="job_description_field" style="display:none;">
+                    <label for="job_description">Upload Job Description (.pdf or .txt):</label>
+                    <input type="file" name="job_description" id="job_description"><br><br>
+                </div>
+            </div>
+            
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+
+        <div id="results"></div>
+    </div>
+</body>
+</html>

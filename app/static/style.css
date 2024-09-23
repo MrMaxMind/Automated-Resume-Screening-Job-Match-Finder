@@ -1,0 +1,104 @@
+/* Center the entire page's content */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff; /* Light blue background */
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container for the entire form and results */
+.container {
+    background-color: #ffffff; /* White background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 450px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* Header styling */
+h1 {
+    color: #4a90e2; /* A calm blue */
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Styling for form options */
+.options label {
+    font-size: 16px;
+    color: #333333;
+}
+
+/* File upload input */
+.file-upload label {
+    font-size: 16px;
+    color: #4a90e2;
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="file"] {
+    font-size: 14px;
+    margin-bottom: 15px;
+    padding: 5px;
+}
+
+/* Submit button styling */
+.submit-btn {
+    background-color: #4a90e2;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #357ABD; /* Darker blue on hover */
+}
+
+/* Results div */
+#results {
+    margin-top: 20px;
+    color: #333333;
+    font-size: 20px; /* Increased font size */
+    text-align: center; /* Center results */
+    line-height: 1.5;
+    font-weight: bold;
+    padding: 20px;
+    background-color: #f9f9f9; /* Slight gray background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+/* Apply larger fonts for suggested roles */
+#results ul {
+    list-style-type: disc;
+    margin: 0;
+    padding: 0;
+    text-align: left; /* Align bullet points properly */
+}
+
+#results li {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Style for h2 inside the results */
+#results h2 {
+    font-size: 22px;
+    color: #4a90e2;
+    margin-bottom: 10px;
+}
+
+/* Enhance the container on hover */
+.container:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Slightly increase shadow */
+}

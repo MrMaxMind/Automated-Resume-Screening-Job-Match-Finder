@@ -1,0 +1,16 @@
+{% if fit_score %}
+<div>
+    <h2>Fit Score: {{ fit_score }}</h2>
+</div>
+{% endif %}
+
+{% if suggested_categories %}
+<div>
+    <h2>Suggested Roles:</h2>
+    <ul>
+        {% for category in suggested_categories %}
+        <li>{{ category }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
