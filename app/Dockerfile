@@ -27,8 +27,8 @@ ENV PATH="/app/venv/bin:$PATH"
 COPY app/bert_model.pth /app/bert_model.pth
 COPY app/bert_tokenizer.pkl /app/bert_tokenizer.pkl
 COPY app/candidate_rankings.pkl /app/candidate_rankings.pkl
-COPY candidate_categories.pkl ./candidate_categories.pkl
-COPY candidate_embeddings.pkl ./candidate_embeddings.pkl
+COPY candidate_categories.pkl /app/candidate_categories.pkl
+COPY candidate_embeddings.pkl /app/candidate_embeddings.pkl
 
 # Expose port
 EXPOSE 5000
