@@ -5,7 +5,7 @@ Welcome to the Automated Resume Screening & Job Match Finder repository. This pr
 ---
 
 <div align="center">
-  <img src="./Resume.jpg" alt="Automated Resume Screening Banner" style="border:none;">
+  <img src="./Resume.svg" alt="Automated Resume Screening Banner" style="border:none;">
 </div>
 
 ---
