@@ -23,16 +23,15 @@ RUN . /app/venv/bin/activate && pip install --upgrade pip && pip install -r requ
 # Ensure the virtual environment is used when running commands
 ENV PATH="/app/venv/bin:$PATH"
 
-# Download the BERT model from Hugging Face
-RUN . /app/venv/bin/activate && python -c "from transformers import BertTokenizer, BertModel; BertModel.from_pretrained('bert-base-uncased'); BertTokenizer.from_pretrained('bert-base-uncased')"
-
-# Ensure necessary model files are copied (this step assumes the model/tokenizer files are pre-downloaded)
-COPY bert_model.pth /app/bert_model.pth
-COPY bert_tokenizer.pkl /app/bert_tokenizer.pkl
-COPY candidate_rankings.pkl /app/candidate_rankings.pkl
+# Ensure necessary model files are copied
+COPY app/bert_model.pth /app/bert_model.pth
+COPY app/bert_tokenizer.pkl /app/bert_tokenizer.pkl
+COPY app/candidate_rankings.pkl /app/candidate_rankings.pkl
+COPY candidate_categories.pkl ./candidate_categories.pkl
+COPY candidate_embeddings.pkl ./candidate_embeddings.pkl
 
 # Expose port
 EXPOSE 5000
 
 # Command to run the Flask app
-CMD ["python", "app.py"]
+CMD ["python", "app/main.py"]
