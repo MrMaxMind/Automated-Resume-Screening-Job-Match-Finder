@@ -28,14 +28,17 @@ This project uses BERT-based embeddings to classify and rank candidates based on
 
 ## 📂 **Contents**
 
-- `app.py`: Flask backend to handle user inputs, API requests, and return classification results.
-- `models/`: Contains `config.json` and `model.safetensors` for the BERT model.
-- `templates/index.html`: Frontend HTML for the user interface.
-- `static/style.css`: Custom CSS for styling the web interface.
-- `static/script.js`: JavaScript for dynamic frontend behavior.
-- `financial_model_training.py` : Python Script to train **BERT Model** and save it.
-- `requirements.txt`: Python dependencies required to run the project.
-- `Dockerfile`: Configuration for containerizing the project.
+- `main.py`: Flask backend responsible for handling user inputs, resume/job description uploads, and returning ranking or job role suggestions.
+- `app/bert_model.pth`: Fine-tuned BERT model weights for resume and job description matching.
+- `app/bert_tokenizer.pkl`: Tokenizer for BERT model used in text embedding generation.
+- `templates/index.html`: Main frontend interface for file uploads and displaying results.
+- `static/style.css`: Custom CSS for styling the interface with a colorful and attractive layout.
+- `static/app.js`: JavaScript for dynamic behavior, enabling file uploads and interaction with the Flask backend.
+- `candidate_embeddings_generator.py`: Python script to generate candidate embeddings and categories for ranking and job matching.
+- `candidate_rankings.pkl`: Pre-generated candidate rankings for efficient real-time results.
+- `candidate_categories.pkl`: Pre-generated job domain embeddings for role suggestions based on resumes.
+- `requirements.txt`: List of Python dependencies required to run the project.
+- `Dockerfile`: Configuration for containerizing and deploying the project on platforms like Render.
 
 ---
 
